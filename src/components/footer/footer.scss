@@ -1,0 +1,29 @@
+.footer {
+    background: black;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #a29f9f;
+    font-style: normal;
+    font-weight: 300;
+    margin-left: auto;
+    margin-right: auto;
+
+    .footer__center-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer {
+      /* justify-content: center; */
+      width: 60%;
+    }
+    .footer__right-text {
+      display: none;
+    }
+  }
