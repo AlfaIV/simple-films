@@ -1,16 +1,17 @@
 import './footer.scss'
+import gitIcon from '../../assets/img/github-icon.svg';
 
-const Footer = () => {
+const MyFooter = () => {
     return (
-        <div class='footer'>
-            <div class='footer__left-text'>2024</div>
+        <div className='footer'>
+            <div className='footer__left-text'>2024</div>
             <a
-                class='footer__center-image'
-                href='../../assets/img/github-icon.svg'
-            ><img src='/icons/git.svg' alt='Путь к репозиторию с исходниками' /></a>
-            <div class='footer__right-text'>VK Internship</div>
+                className='footer__center-image'
+                href='https://github.com/AlfaIV/simple-films'
+            ><img src={gitIcon} alt='Путь к репозиторию с исходниками' /></a>
+            <div className='footer__right-text'>VK Internship</div>
         </div>
     )
 }
 
-export default Footer;
+export default MyFooter;

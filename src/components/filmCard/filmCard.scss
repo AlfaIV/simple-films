@@ -1,0 +1,117 @@
+.film-selection__film {
+    cursor: pointer;
+    margin: 10px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+    
+    .film-selection__film-poster {
+        width: 200px;
+        height: 300px;
+      
+        background-size: cover;
+        background-position: center center;
+
+        .film-selection__film_header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            .film-rating {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2px;
+                margin-right: 5px;
+                min-width: 28px;
+                height: 28px;
+                font-size: 17px;
+                background: #57b846;
+                /*font-size: 1;*/
+            }
+        }
+    }
+
+    .film-selection__film-poster:hover {
+        opacity: 0.9;
+    }
+
+    .film-selection__film-information {
+        .film-selection__film_name {
+            margin-top: 10px;
+            color: black;
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+    }
+
+}
+  
+
+  
+  .film-selection__film_select {
+    width: 65%;
+    height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #cdc6c6;
+    background: rgba(217, 217, 217, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:
+      width,
+      background 0.3s ease;
+  }
+  .film-selection__film_select:hover {
+    background: rgba(107, 103, 103, 0.3);
+  }
+  
+  .film-selection__film_select_img {
+    width: 10%;
+    height: auto;
+  }
+  
+  .film-selection__film_select_p {
+    width: 80%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  .select-collection-frame-list-item:hover {
+    cursor: pointer;
+  }
+  
+  .image-watchlist {
+    margin-top: 2px;
+    width: 50px;
+    height: 50px;
+    /*opacity: 0.8;*/
+  }
+ 
+  @media screen and (max-width: 505px) {
+    .film-selection__film {
+      width: 100px;
+    }
+    .film-selection__film-poster {
+      width: 100px;
+      height: 200px;
+    }
+  
+    .film-selection__film_name {
+      font-size: 15px;
+    }
+  }
