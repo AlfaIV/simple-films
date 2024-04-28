@@ -1,13 +1,25 @@
 import './description.scss'
+import { useDispatch, useSelector } from "react-redux"
 
 const Description = () => {
-    const title = "123";
-    const date = 123441;
-    const country = "Russia";
-    const mark = "1";
-    const mark_number = "4";
-    const infoText = "fjhasdhgfkdsgahifuohlriuerhgirehgiorehguiehruihgruihgiurehgiuerhgui"
-    const url = "https://kinchikoff.ru/wp-content/uploads/2023/06/neuderzhimye-2-2012.jpg"
+    const dispatch = useDispatch();
+    const film = useSelector(state => state.description);
+    console.log(film)
+    const {title,
+        date,
+        country,
+        mark,
+        mark_number,
+        infoText,
+        url} = film;
+    
+    const handlerClick = (e) => {
+        const targetClass = e.currentTarget;
+        switch (targetClass) {
+            default:
+                console.log(targetClass);
+        }
+    }
 
 
     return (
@@ -80,3 +92,4 @@ const Description = () => {
 }
 
 export default Description;
+

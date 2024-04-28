@@ -1,16 +1,32 @@
 import "./filmCard.scss"
+import { useDispatch, useSelector } from "react-redux";
 
 const FilmCard = () => {
-    const title = "21314";
-    const id = "123421";
-    const url = "https://kinchikoff.ru/wp-content/uploads/2023/06/neuderzhimye-2-2012.jpg"
-    const rating = 10;
+    const dispatch = useDispatch();
+    const film = useSelector(state => state.listFilms[0]);
+    console.log(film)
+    const {id, title, url, rating} = film;
+    
+    const handlerClick = (e) => {
+        const targetClass = e.currentTarget;
+        switch (targetClass) {
+            case '1':
+                break;
+            case '2':
+                break;
+            case '3':
+                break;
+            default:
+                console.log(targetClass);
+        }
+    }
 
     return (
         <div
             className='film-selection__film'
             data-section={id}
             draggable='true'
+            onClick={handlerClick}
         >
             <div
                 className='film-selection__film-poster'
