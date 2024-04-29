@@ -4,16 +4,20 @@ import MyFooter from '../../components/footer/footer';
 import FilmCard from '../../components/filmCard/filmCard.js';
 import Description from '../../components/description/description.js';
 import { useDispatch, useSelector } from "react-redux";
+import { fetchFilms, actionAddFilms } from '../../store/actions/listFilmsActions.js';
+import { useEffect, useLayoutEffect } from 'react';
 
 const App = () => {
-
   const dispatch = useDispatch();
   const films = useSelector(state => state.listFilms);
-  console.log(films)
 
-  const handlerClick = (e) => {
-    const targetClass = e.currentTarget;
-    console.log(targetClass);
+  useEffect(() => {
+    dispatch(fetchFilms());
+  }, [dispatch]);
+
+  const handleClick = (e) => {
+    const targetClass = e.currentTarget.className;
+    // console.log(targetClass);
   }
 
   return (
@@ -23,12 +27,12 @@ const App = () => {
         <FilmCard
           id={film.id}
           title={film.title}
-          url={film.url}
-          rating={film.rating}
-          clickHandler={handlerClick}
+          url={"https://image.tmdb.org/t/p/w500"+ film.poster_path}
+          rating={film.vote_average}
+          clickHandler={handleClick}
         />
       )}
-      {/* <Description/> */}
+      {/* <Description /> */}
       <MyFooter />
     </div>
   );
