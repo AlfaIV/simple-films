@@ -1,16 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.scss';
-import App from './views/App/App';
-import 'normalize.css';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+import './index.scss';
+import 'normalize.css';
+
+import App from './views/App/App';
+import ErrorPage from './components/errorPage/errorPage';
+import Description from './components/description/description';
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "film/:filmId",
+    element: <Description />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
     <React.StrictMode>
-      <App />
+      <RouterProvider router={router} />
     </React.StrictMode>
   </Provider>
 );

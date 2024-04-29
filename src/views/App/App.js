@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchFilms, actionAddFilms } from '../../store/actions/listFilmsActions.js';
 import { useEffect, useLayoutEffect } from 'react';
 
+
 const App = () => {
   const dispatch = useDispatch();
   const films = useSelector(state => state.listFilms);
@@ -16,8 +17,8 @@ const App = () => {
   }, [dispatch]);
 
   const handleClick = (e) => {
-    const targetClass = e.currentTarget.className;
-    // console.log(targetClass);
+    const targetID = e.currentTarget.getAttribute('data-section');
+    console.log(targetID);
   }
 
   return (
