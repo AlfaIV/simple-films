@@ -21,10 +21,9 @@ export const filmDescriptionActions = {
 export const filmDescriptionReducer = (state = defaultDescription, action) => {
     switch (action.type) {
       case filmDescriptionActions.GET_DESCRIPTION:
-        // console.log(action.payload)
-        return {description: [ action.payload ]}
+        return {...state, description: [ action.payload ]}
       case filmDescriptionActions.GET_COLLECTION:
-        return {collection: [action.payload]}
+        return {...state, collection: [ action.payload ]}
       default:
         return state;
     }

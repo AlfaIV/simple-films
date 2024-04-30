@@ -22,7 +22,6 @@ export const fetchFilmData = (id) => {
         fetch(url, options)
             .then(res => res.json())
             .then(json => {
-                // console.log(json.title);
                 dispatch(actionGetDescription(json));
             })
             .catch(err => console.error('error:' + err));
@@ -43,7 +42,6 @@ export const fetchCollectionData = (id) => {
         fetch(url, options)
             .then(res => res.json())
             .then(json => {
-                // console.log(json.title);
                 dispatch(actionGetCollection(json));
             })
             .catch(err => console.error('error:' + err));

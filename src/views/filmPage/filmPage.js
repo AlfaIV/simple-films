@@ -18,16 +18,16 @@ const FilmPage = () => {
     useEffect(() => {
         const filmID = currentPath.split('/')[2];
         dispatch(fetchFilmData(filmID));
-        // dispatch(fetchCollectionData(filmID));
+        dispatch(fetchCollectionData(filmID));
     }, []);
 
 
 
     const film = useSelector(state => state.description.description);
-    // const collection = useSelector(state => state.description.collection);
+    const collection = useSelector(state => state.description.collection);
     
-    // console.log(collection);
-    // console.log(film[0]);
+    console.log(collection);
+    // console.log(film);   
     
     
     const handlerClick = (e) => {
@@ -52,9 +52,11 @@ const FilmPage = () => {
                 duration = {film.length > 0 ? film[0].runtime + ' мин' : 'Длительность не загрузились'}
             />
             <div className='collection'>
-                {/* {film.slice(0,4).map(()
-
-                )} */}
+                <h1>Collextion</h1>
+                <p>{collection.length != 0 ? collection[0].results.map(
+                    (film) => film.title
+                ) : 'Ничего не загрузилось(('}
+                </p>
             </div>
             <MyFooter/>
         </div>
