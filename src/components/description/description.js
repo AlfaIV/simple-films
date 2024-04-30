@@ -1,6 +1,17 @@
 import './description.scss'
 
-const Description = ({ date, country, mark, mark_number, infoText, url, title }) => {
+const Description = ({ date, country, mark, mark_number, infoText, url, title, genres, duration }) => {
+
+    const changeMarkColor = (mark, mark_number) =>{
+        if (mark > (2/3*mark_number)){
+            return "green"
+        }else if (mark > (1/3*mark_number)){
+            return "orange"
+        }else{
+            return "red"
+        }
+    }
+
     return (
         <div className='film-description'>
             <p class='film-description__name'>{title}</p>
@@ -11,16 +22,18 @@ const Description = ({ date, country, mark, mark_number, infoText, url, title })
             <div class='film-description__text'>{infoText}</div>
             <table class='film-description__info'>
                 <td class='film-description__info__name'>
+                    <tr>Оценка:</tr>
                     <tr>Год релиза:</tr>
+                    <tr>Длительность:</tr>
                     <tr>Страна:</tr>
                     <tr>Жанры:</tr>
-                    <tr>Актеры:</tr>
                 </td>
                 <td class='film-description__info__param'>
+                    <tr style={{color: changeMarkColor(mark, mark_number)}}>{mark}</tr>
                     <tr>{date}</tr>
+                    <tr>{duration}</tr>
                     <tr>{country}</tr>
-                    <tr></tr>
-                    <tr></tr>
+                    <tr>{genres}</tr>
                 </td>
             </table>
         </div>

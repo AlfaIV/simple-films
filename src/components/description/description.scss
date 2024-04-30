@@ -453,21 +453,23 @@ $text-color: black;
 //   }
 
 $container-1-wight: 400px;
-$container-1-height: 100px;
+$container-1-height: 200px; 
 
 $container-2-wight: 200px;
-$container-2-height: 200px;
+$container-2-height: auto;
 
-$container-3-wight: 200px;
+$container-3-wight: 300px;
 $container-3-height: 500px;
 
 .film-description{
   width: 100%;
   display: grid;
+  gap: 10px;
 
   justify-content: center;
   justify-items: center;
   align-items: center;
+  align-content: center;
 
   grid-template:
   [row1-start] "title title title" $container-1-height [row1-end]
@@ -483,6 +485,8 @@ $container-3-height: 500px;
     font-size: 60px;
     font-weight: lighter;
     margin: 0;
+
+    text-align: center;
   }
 
   .film-description__poster{
@@ -517,10 +521,12 @@ $container-3-height: 500px;
     .film-description__info__name{
       color: $primary-color;
       font-weight: bold;
+      width: 200px;
     }
 
     .film-description__info__param{
       font-weight:lighter;
+      height: auto;
     }
   }
 }
