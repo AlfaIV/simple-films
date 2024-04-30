@@ -2,10 +2,17 @@
 
 .header{
     width: 100%;
-    height: 50px;
+    height: 70px;
     background: $primary-color;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     .header__text{
-        color: wheat;
-        margin: 0;
+        font-size: 30px;
+        color: $panel-text-color;
+        margin-left: $panel-margin;
+        text-decoration: none;
     }
 }

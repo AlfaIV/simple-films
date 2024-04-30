@@ -1,0 +1,20 @@
+.app{
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(5, 300px);
+    grid-template-rows: 50px 400px;
+
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+
+    .header{
+        grid-column: span 5;
+    }
+
+    .footer{
+        grid-column: span 5;
+    }
+
+}

@@ -1,11 +1,16 @@
 import './header.scss'
+import { Link } from "react-router-dom";
 
 const MyHeader = () => {
     return (
+
         <div className='header'>
-            <p className='header__text'>
-                Кино справочник
-            </p>
+            <Link
+                to={'/'}
+                className='header__text'
+            >
+                Кино-справочник
+            </Link>
         </div>
     )
 }
