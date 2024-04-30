@@ -27,7 +27,7 @@ const App = () => {
     <div className="App">
       <MyHeader />
       {films.map(film =>
-        <Link to={`film/${film.id}`}>
+        <Link to={`/film/${film.id}`}>
           <FilmCard
             id={film.id}
             title={film.title}

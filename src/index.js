@@ -24,7 +24,9 @@ const router = createBrowserRouter([
     path: "film/:filmId",
     element: <FilmPage />,
   },
-]);
+], {
+  basename: "/"
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
