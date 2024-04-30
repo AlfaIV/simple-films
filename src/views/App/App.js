@@ -15,12 +15,10 @@ const App = () => {
 
   useEffect(() => {
     dispatch(fetchFilms());
-  }, [dispatch]);
+  }, []);
 
   const handleClick = (e) => {
     const targetID = e.currentTarget.getAttribute('data-section');
-    // dispatch(fetchFilmData(targetID));
-    // console.log(targetID);
   }
 
   return (
