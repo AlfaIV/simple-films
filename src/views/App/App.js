@@ -1,7 +1,10 @@
 import './App.scss';
+
 import MyHeader from '../../components/header/header.js';
 import MyFooter from '../../components/footer/footer';
+import {Paginator} from '../../components/paginator/paginator.js'
 import FilmCard from '../../components/filmCard/filmCard.js';
+
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFilms } from '../../store/actions/listFilmsActions.js';
 import { useEffect} from 'react';
@@ -14,7 +17,7 @@ const App = () => {
   const films = useSelector(state => state.listFilms);
 
   useEffect(() => {
-    dispatch(fetchFilms());
+    dispatch(fetchFilms(1));
   }, []);
 
   const handleClick = (e) => {
@@ -35,7 +38,7 @@ const App = () => {
           />
         </Link>
       )}
-      {/* <Description /> */}
+      <Paginator />
       <MyFooter />
     </div>
   );

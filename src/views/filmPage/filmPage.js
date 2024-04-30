@@ -4,6 +4,7 @@ import MyHeader from '../../components/header/header.js';
 import MyFooter from '../../components/footer/footer';
 import FilmCard from '../../components/filmCard/filmCard.js'
 
+
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFilmData, fetchCollectionData } from '../../store/actions/filmDescriptionActions.js';
 import { useEffect } from 'react';

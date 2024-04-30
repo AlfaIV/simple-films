@@ -1,0 +1,13 @@
+@import '../../index.scss';
+
+.paginator{
+    width: 200px;
+    height: 50px;
+
+    background-color: $panel-text-color;
+    border-radius: 20px;
+
+    text-align: center;
+    pointer-events: auto;
+    cursor: pointer;
+}

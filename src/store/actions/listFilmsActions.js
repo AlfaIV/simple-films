@@ -6,9 +6,9 @@ export const actionAddFilms = (payload) => ({type: listFilmsReducerActionType.AD
 export const actionGetFilms = (payload) => ({type: listFilmsReducerActionType.GET_FILMS})
 
 
-export const fetchFilms = () => {
+export const fetchFilms = (pageNumber) => {
     return (dispatch) => {
-        const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=ru-RU&page=1&sort_by=popularity.desc&api_key=' + apiKey;
+        const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=ru-RU&page=' + pageNumber + '&sort_by=popularity.desc&api_key=' + apiKey;
         const options = {
             method: 'GET',
             headers: { 
