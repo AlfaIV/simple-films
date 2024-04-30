@@ -51,8 +51,8 @@ const FilmPage = () => {
                 genres={film.length > 0 ? film[0].genres.map(genre => genre.name + ' ') : 'Жанры не загрузились'}
                 duration={film.length > 0 ? film[0].runtime + ' мин' : 'Длительность не загрузились'}
             />
+            <h1 className='collection-name'>Похожие фильмы</h1>
             <div className='collection'>
-                <h1>Collextion</h1>
                 {collection.length != 0 ? collection[0].results.slice(0, 5).map(
                     (film) =>
                         <Link to={`/film/${film.id}`}>
