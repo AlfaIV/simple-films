@@ -1,27 +1,6 @@
 import './description.scss'
-import { useDispatch, useSelector } from "react-redux"
 
-const Description = () => {
-    const dispatch = useDispatch();
-    const film = useSelector(state => state.description);
-    console.log(film)
-    const {title,
-        date,
-        country,
-        mark,
-        mark_number,
-        infoText,
-        url} = film;
-    
-    const handlerClick = (e) => {
-        const targetClass = e.currentTarget;
-        switch (targetClass) {
-            default:
-                console.log(targetClass);
-        }
-    }
-
-
+const Description = ({date, country, mark, mark_number, infoText, url, title}) => {
     return (
         <div class='film-page'>
             <div class='film-page__theme'>

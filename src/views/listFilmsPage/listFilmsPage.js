@@ -1,0 +1,2 @@
+import './listFilmsPage.scss'
+

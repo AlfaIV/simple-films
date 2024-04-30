@@ -12,8 +12,7 @@ import 'normalize.css';
 
 import App from './views/App/App';
 import ErrorPage from './components/errorPage/errorPage';
-import Description from './components/description/description';
-
+import FilmPage from './views/filmPage/filmPage';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +22,7 @@ const router = createBrowserRouter([
   },
   {
     path: "film/:filmId",
-    element: <Description />,
+    element: <FilmPage />,
   },
 ]);
 
