@@ -30,7 +30,6 @@ export const fetchFilmData = (id) => {
 
 export const fetchCollectionData = (id) => {
     return (dispatch) => {
-        // 'https://api.themoviedb.org/3/movie/100/recommendations?language=ru-Ru&page=1'
         const url = 'https://api.themoviedb.org/3/movie/' + id + '/recommendations?language=ru-RU&page=1&api_key=' + apiKey;
         const options = {
             method: 'GET',

@@ -19,7 +19,7 @@ const FilmPage = () => {
         const filmID = currentPath.split('/')[2];
         dispatch(fetchFilmData(filmID));
         dispatch(fetchCollectionData(filmID));
-    }, []);
+    }, [currentPath]);
 
 
 

@@ -19,8 +19,8 @@ const App = () => {
 
   const handleClick = (e) => {
     const targetID = e.currentTarget.getAttribute('data-section');
-    dispatch(fetchFilmData(targetID));
-    console.log(targetID);
+    // dispatch(fetchFilmData(targetID));
+    // console.log(targetID);
   }
 
   return (

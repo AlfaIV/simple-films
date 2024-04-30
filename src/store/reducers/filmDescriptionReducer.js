@@ -28,5 +28,3 @@ export const filmDescriptionReducer = (state = defaultDescription, action) => {
         return state;
     }
   }
-
-// 'https://api.themoviedb.org/3/movie/100/recommendations?language=ru-Ru&page=1'
