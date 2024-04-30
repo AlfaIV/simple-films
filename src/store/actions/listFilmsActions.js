@@ -7,7 +7,7 @@ export const actionGetFilms = (payload) => ({type: listFilmsReducerActionType.GE
 
 export const fetchFilms = () => {
     return (dispatch) => {
-        const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&api_key=8941f401c6c08993b695a6b2da9136d5';
+        const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=ru-RU&page=1&sort_by=popularity.desc&api_key=8941f401c6c08993b695a6b2da9136d5';
         const options = {
             method: 'GET',
             headers: { 
