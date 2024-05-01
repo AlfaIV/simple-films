@@ -20,6 +20,7 @@ const FilmPage = () => {
         const filmID = currentPath.split('/')[2];
         dispatch(fetchFilmData(filmID));
         dispatch(fetchCollectionData(filmID));
+        window.scrollTo(0, 0)
     }, [currentPath]);
 
 
