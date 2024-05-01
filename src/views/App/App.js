@@ -6,18 +6,26 @@ import {Paginator} from '../../components/paginator/paginator.js'
 import FilmCard from '../../components/filmCard/filmCard.js';
 
 import { useDispatch, useSelector } from "react-redux";
-import { fetchFilms } from '../../store/actions/listFilmsActions.js';
+import { fetchFilms, actionGetFilms } from '../../store/actions/listFilmsActions.js';
 import { useEffect} from 'react';
 import { Link } from "react-router-dom";
-import { fetchFilmData } from '../../store/actions/filmDescriptionActions.js';
 
 
 const App = () => {
   const dispatch = useDispatch();
-  const films = useSelector(state => state.listFilms);
+  const films = useSelector(state => state.listFilms.listOfFilms);
+  const currentPage = useSelector(state => state.listFilms.lenOfList);
+  console.log("print films");
+  console.log(films.map(film => film));
+  console.log("print currentPage");
+  console.log(currentPage);
 
   useEffect(() => {
-    dispatch(fetchFilms(1));
+    if (currentPage === 1){
+      dispatch(fetchFilms(1));
+    }else{
+      dispatch(actionGetFilms());
+    }
   }, []);
 
   const handleClick = (e) => {
