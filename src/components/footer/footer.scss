@@ -1,0 +1,44 @@
+@import '../../index.scss';
+
+.footer {
+    background: rgba(0, 0, 0, 0.8);
+    height: 50px;
+    width: 100%;
+
+    display: flex;
+    
+    justify-content: center;
+
+
+    align-items: center;
+
+    gap: 50px;
+    
+    color: $panel-text-color;
+    font-style: normal;
+    font-size: 15px;
+
+    .footer__center-credits{
+        width: 1100px;
+        height: 50px;
+        text-decoration: none;
+        color: $panel-text-color;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 20px
+           
+    }
+
+    .footer__center-credits__img{
+        width: 200px;
+        height: 50px;
+    }
+
+    .footer__center-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  }
