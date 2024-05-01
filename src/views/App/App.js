@@ -15,9 +15,9 @@ const App = () => {
   const dispatch = useDispatch();
   const films = useSelector(state => state.listFilms.listOfFilms);
   const currentPage = useSelector(state => state.listFilms.lenOfList);
-  console.log("print films");
-  console.log(films.map(film => film));
-  console.log("print currentPage");
+  // console.log("print films");
+  // console.log(films.map(film => film));
+  // console.log("print currentPage");
   console.log(currentPage);
 
   useEffect(() => {
