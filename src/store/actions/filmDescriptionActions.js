@@ -8,6 +8,10 @@ export const actionGetDescription = (payload) => ({
 export const actionGetCollection = (payload) => ({
     type: filmDescriptionActions.GET_COLLECTION, payload
 })
+export const fetchDescription = () => ({
+    type: filmDescriptionActions.FETCH_DESCRIPTION
+})
+
 
 export const fetchFilmData = (id) => {
     return (dispatch) => {

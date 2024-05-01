@@ -1,5 +1,3 @@
-import Description from "../../components/description/description";
-
 const defaultDescription = {
     description: [],
     collection: [],
@@ -16,6 +14,7 @@ const defaultDescription = {
 export const filmDescriptionActions = {
   GET_DESCRIPTION: 'GET_DESCRIPTION',
   GET_COLLECTION: 'GET_COLLECTION',
+  FETCH_DESCRIPTION: 'FETCH_DESCRIPTION',
 }
 
 export const filmDescriptionReducer = (state = defaultDescription, action) => {
