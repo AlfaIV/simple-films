@@ -1,6 +1,6 @@
 const defaultFilm = {
   listOfFilms: [],
-  lenOfList: 1,  
+  lenOfList: 0,  
   // {
   //   title: "Неудержимые 1",
   //   id: "1",
