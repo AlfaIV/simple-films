@@ -1,12 +1,38 @@
-.collection-name{
-    text-align: center;
-}
 
-.collection{    
-    display: flex;
-    gap: 30px;
+.film-page{
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(5, 300px);
+
     justify-content: center;
-    align-content: center;
-    margin-bottom: 50px;
+    justify-items: center;
+    align-items: start;
+
+    .header{
+        grid-column: span 5;
+    }
+
+    .film-description{
+        grid-column: span 5;
+    }
+    
+    .collection-name{
+        text-align: center;
+        grid-column: span 5;
+    }
+
+    .collection{    
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 50px;
+        grid-column: span 5;
+    }
+
+    .footer{
+        grid-column: span 5;
+    }
 
 }
