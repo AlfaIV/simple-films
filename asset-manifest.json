@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.ddb84033.css",
-    "main.js": "/react-gh-pages/static/js/main.5232c45d.js",
-    "static/media/github-icon.svg": "/react-gh-pages/static/media/github-icon.03a203264122584c696bc60fc751ddcc.svg",
-    "static/media/tmdb2.svg": "/react-gh-pages/static/media/tmdb2.caee745762db3e030d38ebb5a167ae05.svg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.ddb84033.css.map": "/react-gh-pages/static/css/main.ddb84033.css.map",
-    "main.5232c45d.js.map": "/react-gh-pages/static/js/main.5232c45d.js.map"
+    "main.css": "/simple-films/static/css/main.ddb84033.css",
+    "main.js": "/simple-films/static/js/main.5e081dc3.js",
+    "static/media/github-icon.svg": "/simple-films/static/media/github-icon.03a203264122584c696bc60fc751ddcc.svg",
+    "static/media/tmdb2.svg": "/simple-films/static/media/tmdb2.caee745762db3e030d38ebb5a167ae05.svg",
+    "index.html": "/simple-films/index.html",
+    "main.ddb84033.css.map": "/simple-films/static/css/main.ddb84033.css.map",
+    "main.5e081dc3.js.map": "/simple-films/static/js/main.5e081dc3.js.map"
   },
   "entrypoints": [
     "static/css/main.ddb84033.css",
-    "static/js/main.5232c45d.js"
+    "static/js/main.5e081dc3.js"
   ]
 }
