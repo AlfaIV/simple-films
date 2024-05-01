@@ -6,7 +6,7 @@ import {Paginator} from '../../components/paginator/paginator.js'
 import FilmCard from '../../components/filmCard/filmCard.js';
 
 import { useDispatch, useSelector } from "react-redux";
-import { fetchFilms, actionGetFilms } from '../../store/actions/listFilmsActions.js';
+import { fetchFilms, actionGetFilms, fetchPage } from '../../store/actions/listFilmsActions.js';
 import { useEffect} from 'react';
 import { Link } from "react-router-dom";
 
@@ -22,7 +22,7 @@ const App = () => {
 
   useEffect(() => {
     if (currentPage === 1){
-      dispatch(fetchFilms(1));
+      dispatch(fetchPage(1));
     }else{
       dispatch(actionGetFilms());
     }

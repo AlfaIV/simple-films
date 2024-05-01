@@ -19,6 +19,7 @@ export const listFilmsReducerActionType = {
   GET_FILMS: "GET_FILMS",
   ADD_FILMS: "ADD_FILMS",
   SET_PAGE: "SET_PAGE",
+  FETCH_FILMS: "FETCH_FILMS",
 }
 
 export const listFilmsReducer = (state = defaultFilm, action) => {
@@ -26,7 +27,6 @@ export const listFilmsReducer = (state = defaultFilm, action) => {
       case listFilmsReducerActionType.GET_FILMS:
         return {...state}
       case listFilmsReducerActionType.ADD_FILMS:
-        console.log([...action.payload])
         return {...state, listOfFilms: [...state.listOfFilms,...action.payload]}
       case listFilmsReducerActionType.SET_PAGE:
           return {...state, lenOfList: action.payload}

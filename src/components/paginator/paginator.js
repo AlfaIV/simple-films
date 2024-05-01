@@ -1,5 +1,5 @@
 import './paginator.scss'
-import { fetchFilms, actionSetPage } from '../../store/actions/listFilmsActions.js';
+import { fetchFilms, actionSetPage, fetchPage } from '../../store/actions/listFilmsActions.js';
 import { useDispatch} from "react-redux";
 import { useState } from 'react';
 
@@ -10,7 +10,7 @@ export const Paginator = () => {
 
     const clickHandler = () => {
         setPageNumber(pageNumber + 1);
-        dispatch(fetchFilms(pageNumber));
+        dispatch(fetchPage(pageNumber));
         dispatch(actionSetPage(pageNumber));
     }
 
