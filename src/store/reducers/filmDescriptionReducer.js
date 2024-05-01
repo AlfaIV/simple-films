@@ -15,6 +15,7 @@ export const filmDescriptionActions = {
   GET_DESCRIPTION: 'GET_DESCRIPTION',
   GET_COLLECTION: 'GET_COLLECTION',
   FETCH_DESCRIPTION: 'FETCH_DESCRIPTION',
+  FETCH_COLLECTION: 'FETCH_COLLECTION',
 }
 
 export const filmDescriptionReducer = (state = defaultDescription, action) => {

@@ -6,7 +6,7 @@ import FilmCard from '../../components/filmCard/filmCard.js'
 
 
 import { useDispatch, useSelector } from "react-redux";
-import { fetchFilmData, fetchCollectionData, fetchDescription } from '../../store/actions/filmDescriptionActions.js';
+import { fetchFilmData, fetchCollectionData, fetchDescription, fetchCollection } from '../../store/actions/filmDescriptionActions.js';
 import { useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 
@@ -18,8 +18,8 @@ const FilmPage = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         const filmID = currentPath.split('/')[2];
-        dispatch(fetchDescription());
-        dispatch(fetchCollectionData(filmID));
+        dispatch(fetchDescription(filmID));
+        dispatch(fetchCollection(filmID));
         window.scrollTo(0, 0)
     }, [currentPath]);
 
