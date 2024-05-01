@@ -44,6 +44,7 @@ const FilmPage = () => {
         <div className='film-page'>
             <MyHeader />
             <Description
+            
                 title={film.length > 0 ? film[0].title : "Не загрузилось имя фильма"}
                 date={film.length > 0 ? film[0].release_date : "Не загрузилось дата выпуска фильма"}
                 country={film.length > 0 ? film[0].production_countries[0].name : "Не загрузилось страна, выпустившая фильм"}
